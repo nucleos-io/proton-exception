@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = class extends Error {
+module.exports = class Exception extends Error {
 
   constructor(message, proton) {
     super(message)

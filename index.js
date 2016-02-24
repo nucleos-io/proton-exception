@@ -2,8 +2,9 @@
 
 module.exports = class extends Error {
 
-  constructor(message) {
+  constructor(message, proton) {
     super(message)
+    this.proton = proton
     this.message = message
     this._bindToApp()
     this.expose()

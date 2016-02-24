@@ -16,7 +16,7 @@ module.exports = class extends Error {
   }
 
   expose() {
-    global[this.name] = this.model
+    global[this.name] = this
     return true
   }
 

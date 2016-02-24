@@ -16,12 +16,12 @@ module.exports = class Exception extends Error {
   }
 
   expose() {
-    global[this.name] = this
+    global[this.name] = this.constructor
     return true
   }
 
   _bindToApp() {
-    this.proton.app.exceptions[this.name] = this
+    this.proton.app.exceptions[this.name] = this.constructor
   }
 
   /**

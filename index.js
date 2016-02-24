@@ -4,7 +4,6 @@ module.exports = class extends Error {
 
   constructor(message) {
     super(message)
-    this.name = this.constructor.name
     this.message = message
     this._bindToApp()
     this.expose()

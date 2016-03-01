@@ -12,11 +12,8 @@ module.exports = class Exception extends Error {
     return ctx.status = 500
   }
 
-  /**
-   * @return class name
-   */
-  get name() {
-    return this.constructor.name
+  static expose(exception) {
+    global[exception.name] = exception
   }
 
 }
